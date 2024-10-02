@@ -1,0 +1,38 @@
+<head>
+    <meta charset="UTF-8">
+    <!-- Configurando a página para ser responsiva -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Level Up & Chill</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./public/controller.ico" type="image/x-icon">
+</head>
+
+<h1><b>{{mensagem}}</b></h1>
+<body>
+    <main>
+        <div class="signup-container">
+            <h2>Cadastro</h2>
+            <br>
+            <form class="signup-form" action="welcome.html">
+                Nome Completo: <input type="text"  [(ngModel)] = "obj.nome" required>
+                Telefone: <input type="text" placeholder="Contato" [(ngModel)] = "obj.telefone" required>
+                Documento: <input type="text"  placeholder="CPF" [(ngModel)] = "obj.documento" required>
+                Email: <input type="text" placeholder="Cadastro@gmail.com" [(ngModel)] = "obj.email" required>
+                Senha: <input type="password" placeholder="Senha" [(ngModel)] = "obj.senha" required>
+                <button class="btn-go" (click)="gravar()">Go!</button>
+            </form>
+            <br>
+        </div>
+    </main>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+    <footer>
+        <p>&copy; Alicia Abade e Caio Lima - 2024</p>
+    </footer>
+</body>

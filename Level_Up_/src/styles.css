@@ -1,1 +1,489 @@
-/* You can add global styles to this file, and also import other style files */
+.press-start-2p-regular {
+    font-family: "Press Start 2P", system-ui;
+    font-style: normal;
+}  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Press Start 2P', sans-serif;
+    background-color: #2C003E; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    display: flex;
+    flex-direction:column;
+    min-height: 100vh;
+    background-image: url("./public/dino1.png");
+    background-position: bottom left; 
+    background-repeat: repeat; 
+    background-size: contain; 
+}
+
+/* Estilo do cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #390E4C;
+    
+}
+
+/* Logo e título */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo-container h1 {
+    font-size: 18px;
+    color: white;
+}
+
+/* Barra de pesquisa */
+.search-container {
+    flex-grow: 1;
+    padding: 0 10px;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    font-size: 14px;
+}
+
+/* Ícones do menu */
+.menu {
+    display: flex;
+    gap: 15px;
+    font-size: 15px;
+    cursor: pointer;
+    color: #FFFFFF;
+    /* Cor para o ícone do menu */
+}
+
+/* Conteúdo principal */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Container de login e cadastro */
+.login-container, .signup-container {
+    text-align: center;
+    background-color: #E40058;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1; /* Faz o formulário ficar acima do fundo */
+}
+
+/* Inputs e botões */
+.login-form input, .signup-form input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.btn-go {
+    font-family: 'Press Start 2P', sans-serif;
+    background-color: #32003F;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #390E4C; /* Rodapé na mesma cor do header */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* RESPONSIVIDADE */
+
+/* Para dispositivos pequenos */
+@media screen and (max-width: 768px) {
+    .login-container, .signup-container {
+        width: 90%;
+    }
+
+    .logo {
+        height: 40px;
+    }
+
+    .menu img {
+        height: 25px;
+    }
+
+    .search-bar, .search-container {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .btn-go {
+        padding: 8px;
+    }
+
+    body {
+        background-size: contain; /* O balão fica um pouco maior em telas menores */
+    }
+}
+
+@media (max-width: 600px) {
+    .login-container, .signup-container {
+        width: 90%;
+    }
+
+    .logo {
+        height: 40px;
+    }
+
+    .menu img {
+        height: 25px;
+    }
+
+    .search-bar, .search-container {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .btn-go {
+        padding: 8px;
+    }
+
+    body {
+        background-size: contain; /* O balão fica um pouco maior em telas menores */
+    }
+}
+
+/* Para tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .login-container, .signup-container {
+        width: 70%;
+    }
+
+    .logo {
+        height: 50px;
+    }
+
+    .menu img {
+        height: 30px;
+    }
+
+    .btn-go {
+        padding: 10px;
+    }
+
+    body {
+        background-size: contain;
+    }
+}
+
+/* Para notebooks e desktops */
+@media (min-width: 1025px) {
+    .login-container, .signup-container {
+        width: 400px;
+    }
+
+    .logo {
+        height: 60px;
+    }
+
+    .menu img {
+        height: 35px;
+    }
+
+    .btn-go {
+        padding: 12px;
+    }
+
+    body {
+        background-size: contain;
+    }
+}
+
+pagina inicial{
+    .press-start-2p-regular {
+        font-family: "Press Start 2P", system-ui;
+        font-style: normal;
+    }
+    
+    body {
+        font-family: 'Press Start 2P', sans-serif;
+        background-color: #2C003E;
+        color: white;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: #390E4C;
+    }
+    
+    .logo-container {
+        display: flex;
+        align-items: center;
+    }
+    
+    .logo {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
+    
+    .logo-container h1 {
+        font-size: 18px;
+        color: white;
+    }
+    
+    .search-container {
+        flex-grow: 1;
+        padding: 0 10px;
+    }
+    
+    .search-bar {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+    
+    .menu {
+        display: flex;
+        gap: 15px;
+        font-size: 15px;
+        cursor: pointer;
+        color: #FFFFFF;
+        /* Cor para o ícone do menu */
+    }
+    
+    .cat {
+        color: #ffffff;
+        font-size: 15px;
+        align-items: center;
+    }
+    
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #80002A;
+        /* Cor da barra lateral */
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+    
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 10px;
+        color: #ffffff;
+        /* Texto branco na barra lateral */
+        display: block;
+        transition: 0.3s;
+    }
+    
+    .sidenav a:hover {
+        color: #ff0000;
+        /* Cor do link em hover */
+    }
+    
+    /* Carousel */
+    
+    .prev, .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 15px;
+        cursor: pointer;
+        z-index: 10;
+        font-size: 2rem;
+    }
+    
+    .prev {
+        left: 10px;
+    }
+    
+    .next {
+        right: 10px;
+    }
+    
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    .featured-products {
+        padding: 20px;
+    }
+    
+    .product-item {
+        display: grid;
+        background-color: #444;
+        /* Fundo para os itens de produtos */
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+    }
+    
+    .product-item img {
+        max-width: 50%;
+        height: auto;
+    }
+    
+    footer {
+        text-align: center;
+        padding: 15px;
+        background-color: #390E4C;
+        /* Rodapé na mesma cor do header */
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        font-size: 12px;
+    }
+    
+    /* Para notebooks e desktops */
+    @media (max-width: 1200px) {
+        body {
+            font-size: 0.95rem;
+        }
+        header h1 {
+            font-size: 16px;
+        }
+        .search-bar {
+            font-size: 12px;
+        }
+        .prev, .next {
+            font-size: 1.8rem;
+        }
+    }
+    
+    /* Para tablets em modo paisagem */
+    @media (max-width: 1024px) {
+        body {
+            font-size: 0.9rem;
+        }
+        header h1 {
+            font-size: 14px;
+        }
+        .carousel-container {
+            height: 70vh;
+        }
+        .carousel-item {
+            height: 70vh;
+        }
+        .search-bar {
+            padding: 8px;
+            font-size: 12px;
+        }
+    }
+    
+    /* Para tablets em modo retrato */
+    @media (max-width: 768px) {
+        body {
+            font-size: 0.85rem;
+        }
+        header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .logo {
+            width: 40px;
+            height: 40px;
+        }
+        .menu {
+            font-size: 12px;
+        }
+        .carousel-container {
+            height: 60vh;
+        }
+        .carousel-item {
+            height: 60vh;
+        }
+        .search-bar {
+            font-size: 10px;
+        }
+    }
+    
+    /* Para celulares */
+    @media (max-width: 600px) {
+        body {
+            font-size: 0.8rem;
+        }
+        .logo {
+            width: 35px;
+            height: 35px;
+        }
+        header h1 {
+            font-size: 12px;
+        }
+        .carousel-container {
+            height: 50vh;
+        }
+        .carousel-item {
+            height: 50vh;
+        }
+        .prev, .next {
+            font-size: 1.5rem;
+            padding: 10px;
+        }
+    }
+    
+    /* Para smartphones pequenos */
+    @media (max-width: 480px) {
+        body {
+            font-size: 0.75rem;
+        }
+        header {
+            padding: 5px;
+        }
+        .menu {
+            font-size: 10px;
+        }
+        .carousel-container {
+            height: 45vh;
+        }
+        .carousel-item {
+            height: 45vh;
+        }
+        .prev, .next {
+            font-size: 1.2rem;
+            padding: 8px;
+        }
+    }
+}
