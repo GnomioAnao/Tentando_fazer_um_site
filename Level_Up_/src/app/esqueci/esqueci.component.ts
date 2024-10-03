@@ -17,7 +17,7 @@ export class EsqueciComponent {
 
   // o '+' junta a string do email (concatena)
   public reenviar(){
-    this.mensagem= "as intruções foram eviasdas para o email:" 
+    this.mensagem= "As instruções foram eviadas para o Email:" 
     + this.obj.email;
   }
 }

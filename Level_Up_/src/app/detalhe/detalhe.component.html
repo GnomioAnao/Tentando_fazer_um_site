@@ -1,1 +1,68 @@
-<p>detalhe works!</p>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto - Cabo VGA</title>
+    <style class="paginaInicial paginaDetalhe estiloProdutos"></style>
+    <link rel="shortcut icon" href="assets/controller.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <a href="pagina-inicial.component.html"><img src="assets/marca_1.png" alt="Logo" class="logo"></a>
+                <h1>Level Up & Chill</h1>
+            </div>
+            <div class="search-container">
+                <input type="text" class="search-bar" placeholder="Pesquisar...">
+            </div>
+            <div class="menu">
+                <div class="menu">
+                    <a href="./cliente">👤</a>
+                    <a href="pagina-compras.html">🛒</a>
+                    <div class="menu-icon" onclick="openNav()">☰</div>
+                </div>
+            </div>
+        </header>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <p class="cat">Categorias</p><br>
+            <a href="pagina-cabos.html">Cabos</a>
+            <a href="pagina-cadeira.html">Cadeiras Gamer</a>
+            <!-- Outras categorias -->
+        </div>
+
+        <div class="produto-detalhes">
+            <!-- Container da imagem do produto -->
+            <div class="produto-imagem">
+                <img src="assets/cabovga5-para-monitor.webp" alt="Cabo VGA">
+            </div>
+            <!-- Container dos detalhes do produto -->
+            <div class="produto-info">
+                <h2 id="produto-nome">Nome do Produto</h2>
+                <p id="produto-descricao">Descrição do produto.</p>
+                <span class="preco" id="produto-preco">R$ 0,00</span>
+                <div class="actions">
+                    <button onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+                    <i class="cart-icon" onclick="adicionarAoCarrinho()">🛒</i>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <a href="pagina-compras.html">Ir para o Carrinho</a>
+        </footer>
+    </div>
+</body>
+
+<!--<h4>{{mensagem}}</h4>
+<div *ngIf="item.codigo > 0 ">
+    <h3>{{item.nome}}</h3>
+    <img src="./{{item.codigo}}.jpg"><br>
+    {{item.descritivo}} <br>
+    R$ {{item.valor}} <br>
+    <button *ngIf="item.quantidade>0">Comprar</button>
+    <div *ngIf="item.quantidade<=0">Sem estoque</div>
+</div> -->

@@ -15,7 +15,7 @@ body {
     display: flex;
     flex-direction:column;
     min-height: 100vh;
-    background-image: url("./public/dino1.png");
+    background-image: url("/public/dino1.png");
     background-position: bottom left; 
     background-repeat: repeat; 
     background-size: contain; 
@@ -225,7 +225,7 @@ footer {
     }
 }
 
-pagina inicial{
+.paginaInicial{
     .press-start-2p-regular {
         font-family: "Press Start 2P", system-ui;
         font-style: normal;
@@ -484,6 +484,585 @@ pagina inicial{
         .prev, .next {
             font-size: 1.2rem;
             padding: 8px;
+        }
+    }
+}
+
+.paginaCompra{
+    * {
+        margin: 0;
+        /* Remove todas as margens padrão de todos os elementos */
+        padding: 0;
+        /* Remove o padding padrão de todos os elementos */
+        box-sizing: border-box;
+        /* Inclui bordas e padding no cálculo da largura/altura */
+    }
+    
+    body {
+        font-family: 'Press Start 2P', sans-serif;
+        /* Define a fonte 'Press Start 2P' com fallback para sans-serif */
+        background-color: #290036;
+        /* Define a cor de fundo como roxo escuro */
+        color: white;
+        /* Define a cor do texto como branco */
+        display: flex;
+        /* Utiliza flexbox para o layout do body */
+        justify-content: center;
+        /* Centraliza o conteúdo horizontalmente */
+        align-items: center;
+        /* Centraliza o conteúdo verticalmente */
+        height: 100vh;
+        /* O corpo ocupará 100% da altura da janela do navegador */
+    }
+    
+    .container {
+        width: 90%;
+        /* Define a largura do container como 90% da tela */
+        max-width: 800px;
+        /* A largura máxima é limitada a 800px */
+        background-color: #3a004a;
+        /* Define a cor de fundo do container como roxo escuro */
+        padding: 20px;
+        /* Adiciona um espaçamento interno de 20px ao container */
+        border-radius: 10px;
+        /* Bordas arredondadas com raio de 10px */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        /* Adiciona sombra ao container */
+        text-align: center;
+        /* Centraliza o texto no container */
+    }
+    
+    header {
+        display: flex;
+        /* Flexbox para layout do cabeçalho */
+        justify-content: center;
+        /* Centraliza o conteúdo do cabeçalho horizontalmente */
+        align-items: center;
+        /* Centraliza o conteúdo do cabeçalho verticalmente */
+        margin-bottom: 20px;
+        /* Adiciona uma margem inferior de 20px ao cabeçalho */
+    }
+    
+    header h1 {
+        margin-left: 10px;
+        /* Adiciona uma margem à esquerda do título h1 */
+    }
+    
+    table {
+        width: 100%;
+        /* Define a largura da tabela para ocupar 100% do espaço disponível */
+        margin-bottom: 20px;
+        /* Adiciona uma margem inferior de 20px à tabela */
+    }
+    
+    table,
+    th,
+    td {
+        border-collapse: collapse;
+        /* Remove os espaços entre as bordas da tabela */
+        border: 1px solid #fff;
+        /* Define bordas brancas com espessura de 1px em toda a tabela */
+    }
+    
+    th,
+    td {
+        padding: 10px;
+        /* Adiciona um espaçamento interno de 10px nas células da tabela */
+        text-align: left;
+        /* Alinha o texto das células à esquerda */
+    }
+    
+    th {
+        background-color: #4c0058;
+        /* Define a cor de fundo dos cabeçalhos da tabela como roxo escuro */
+    }
+    
+    .total {
+        font-size: 18px;
+        /* Define o tamanho da fonte do total como 18px */
+        margin-bottom: 20px;
+        /* Adiciona uma margem inferior de 20px ao total */
+    }
+    
+    .buttons {
+        display: flex;
+        /* Flexbox para layout dos botões */
+        justify-content: space-between;
+        /* Espaça os botões de forma igual */
+    }
+    
+    button {
+        background-color: #E40058;
+        /* Define a cor de fundo dos botões como rosa */
+        color: white;
+        /* Define a cor do texto dos botões como branco */
+        border: none;
+        /* Remove as bordas dos botões */
+        padding: 10px 20px;
+        /* Adiciona padding interno de 10px vertical e 20px horizontal nos botões */
+        border-radius: 5px;
+        /* Bordas arredondadas com raio de 5px */
+        cursor: pointer;
+        /* Muda o cursor para indicar que é um botão clicável */
+        transition: background-color 0.3s;
+        /* Define uma transição suave ao mudar a cor de fundo */
+    }
+    
+    button:hover {
+        background-color: #E40058;
+        /* Mantém a cor do botão quando o cursor está sobre ele (pode ser um erro, pois normalmente a cor mudaria) */
+    }
+    
+    @media (max-width: 768px) {
+        .container {
+            width: 100%;
+            /* Define a largura do container para 100% em telas menores */
+            padding: 10px;
+            /* Reduz o padding interno para 10px em telas menores */
+        }
+    
+        table,
+        th,
+        td {
+            font-size: 14px;
+            /* Reduz o tamanho da fonte da tabela para 14px em telas menores */
+        }
+    
+        .total {
+            font-size: 16px;
+            /* Reduz o tamanho da fonte do total para 16px em telas menores */
+        }
+    
+        button {
+            padding: 8px 16px;
+            /* Reduz o padding dos botões em telas menores */
+        }
+    }
+    
+    @media (max-width: 480px) {
+        header h1 {
+            font-size: 18px;
+            /* Reduz o tamanho da fonte do título para 18px em telas muito pequenas */
+        }
+    
+        .total {
+            font-size: 14px;
+            /* Reduz o tamanho da fonte do total para 14px em telas muito pequenas */
+        }
+    
+        button {
+            padding: 6px 12px;
+            /* Reduz ainda mais o padding dos botões em telas muito pequenas */
+        }
+    }
+}
+
+.paginaDetalhe{
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Press Start 2P', sans-serif;
+        background-color: #2C003E;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: #390E4C;
+    }
+    
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    
+    .logo-container {
+        display: flex;
+        align-items: center;
+    }
+    
+    .logo {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
+    
+    .logo-container h1 {
+        font-size: 18px;
+        color: white;
+    }
+    
+    .produto-detalhes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+    
+    .produto-imagem img {
+        max-width: 300px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .produto-info {
+        max-width: 600px;
+        text-align: left;
+    }
+    
+    .produto-info h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    
+    .produto-info p {
+        margin-bottom: 10px;
+    }
+    
+    .preco {
+        font-size: 22px;
+        color: #ff6600;
+        margin-bottom: 20px;
+    }
+    
+    .actions {
+        display: flex;
+        gap: 10px;
+    }
+    
+    button,
+    .cart-icon {
+        background-color: #E40058;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    button:hover,
+    .cart-icon:hover {
+        background-color: #a5003f;
+    }
+    
+    .cart-icon {
+        font-size: 24px;
+        display: inline-block;
+    }
+    
+    footer {
+        margin-top: 20px;
+    }
+    
+    footer a {
+        color:white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    footer a:hover {
+        text-decoration: underline;
+        
+    }
+    
+    @media (max-width: 768px) {
+        .produto-detalhes {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .produto-imagem img {
+            max-width: 100%;
+        }
+    
+        .produto-info {
+            max-width: 100%;
+        }
+    
+        .actions {
+            justify-content: center;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        header h1 {
+            font-size: 18px;
+        }
+    
+        .produto-info h2 {
+            font-size: 20px;
+        }
+    
+        .preco {
+            font-size: 20px;
+        }
+    }
+}
+
+.estiloProdutos{
+        /* Reset básico: Remove margens e espaçamentos padrões, e define box-sizing para incluir bordas e padding no tamanho total do elemento */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Estilização do corpo da página */
+    body {
+        font-family: 'Press Start 2P', sans-serif;
+        /* Define a fonte principal */
+        background-color: #2C003E;
+        /* Cor de fundo da página */
+        color: white;
+        /* Cor do texto */
+        display: flex;
+        /* Define o layout flexível */
+        flex-direction: column;
+        /* Alinha os itens em coluna */
+    }
+
+    /* Estilização do cabeçalho (header) */
+    header {
+        display: flex;
+        /* Layout flexível no cabeçalho */
+        justify-content: space-between;
+        /* Espaçamento entre logo e menu */
+        align-items: center;
+        /* Alinhamento dos itens no centro */
+        padding: 10px;
+        /* Espaçamento interno */
+        background-color: #390E4C;
+        /* Cor de fundo do cabeçalho */
+    }
+
+    /* Container da logo */
+    .logo-container {
+        display: flex;
+        /* Exibe logo e título em linha */
+        align-items: center;
+        /* Alinha a logo com o texto verticalmente */
+    }
+
+    /* Estilização da logo */
+    .logo {
+        width: 50px;
+        /* Largura da logo */
+        height: 50px;
+        /* Altura da logo */
+        margin-right: 10px;
+        /* Espaçamento entre a logo e o título */
+    }
+
+    /* Estilização do título dentro do container da logo */
+    .logo-container h1 {
+        font-size: 18px;
+        /* Tamanho da fonte do título */
+        color: white;
+        /* Cor do texto do título */
+    }
+
+    /* Container da barra de pesquisa */
+    .search-container {
+        flex-grow: 1;
+        /* Ocupa o máximo de espaço disponível */
+        padding: 0 10px;
+        /* Espaçamento interno da barra de pesquisa */
+    }
+
+    /* Estilização da barra de pesquisa */
+    .search-bar {
+        width: 100%;
+        /* Largura total do container */
+        padding: 10px;
+        /* Espaçamento interno */
+        border: none;
+        /* Remove a borda padrão */
+        border-radius: 5px;
+        /* Cantos arredondados */
+        font-size: 14px;
+        /* Tamanho da fonte da barra de pesquisa */
+    }
+
+    /* Estilização do menu */
+    .menu {
+        display: flex;
+        /* Layout flexível para os itens do menu */
+        gap: 15px;
+        /* Espaçamento entre os itens do menu */
+    }
+
+    /* Estilização das imagens do menu */
+    .menu img {
+        width: 30px;
+        /* Largura dos ícones do menu */
+        height: 30px;
+        /* Altura dos ícones do menu */
+        cursor: pointer;
+        /* Cursor de mão ao passar o mouse */
+    }
+
+    /* Sidebar (menu lateral) */
+    .sidebar {
+        width: 200px;
+        /* Largura da sidebar */
+        background-color: #80002A;
+        /* Cor de fundo da sidebar */
+        padding: 20px;
+        /* Espaçamento interno */
+        position: fixed;
+        /* Fixa a sidebar na tela */
+        top: 70px;
+        /* Distância do topo da tela */
+        bottom: 0;
+        /* Até o rodapé */
+        left: 0;
+        /* Posicionada à esquerda */
+        overflow-y: auto;
+        /* Rolagem vertical, se necessário */
+    }
+
+    /* Estilização da lista de links da sidebar */
+    .sidebar ul {
+        list-style-type: none;
+        /* Remove marcadores de lista */
+    }
+
+    /* Estilização dos itens da lista */
+    .sidebar li {
+        margin-bottom: 15px;
+        /* Espaçamento entre os itens da lista */
+    }
+
+    /* Estilização dos links da sidebar */
+    .sidebar a {
+        text-decoration: none;
+        /* Remove o sublinhado dos links */
+        color: #ffffff;
+        /* Cor branca dos links */
+        font-size: 10px;
+        /* Tamanho da fonte dos links */
+        transition: color 0.3s;
+        /* Transição suave da cor ao passar o mouse */
+    }
+
+    /* Estilização ao passar o mouse sobre os links */
+    .sidebar a:hover {
+        color: #ff0000;
+        /* Muda a cor do link ao passar o mouse */
+    }
+
+    /* Estilização da seção de produtos */
+    .products {
+        margin-left: 220px;
+        /* Espaço da margem para a sidebar */
+        padding: 20px;
+        /* Espaçamento interno dos produtos */
+    }
+
+    /* Layout em grid para os produtos */
+    .product-grid {
+        display: grid;
+        /* Define layout em grid */
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        /* Tamanho mínimo de 150px por coluna, adaptando-se ao espaço */
+        gap: 20px;
+        /* Espaçamento entre os produtos */
+    }
+
+    /* Estilização das imagens dos produtos */
+    .product img {
+        width: 100%;
+        /* Largura total do container */
+        height: auto;
+        /* Altura ajustável mantendo a proporção */
+        border-radius: 10px;
+        /* Cantos arredondados nas imagens */
+        background-color: #fff;
+        /* Cor de fundo das imagens */
+        padding: 10px;
+        /* Espaçamento interno das imagens */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        /* Sombra para dar destaque */
+        transition: transform 0.3s;
+        /* Transição suave no efeito de hover */
+        cursor: pointer;
+        /* Cursor de mão ao passar o mouse */
+    }
+
+    /* Efeito de hover nas imagens dos produtos */
+    .product img:hover {
+        transform: scale(1.05);
+        /* Aumenta a imagem em 5% ao passar o mouse */
+    }
+
+    /* Estilização do rodapé */
+    footer {
+        text-align: center;
+        /* Alinhamento centralizado do texto */
+        padding: 15px;
+        /* Espaçamento interno */
+        background-color: #390E4C;
+        /* Cor de fundo do rodapé */
+        position: relative;
+        /* Define a posição relativa */
+        bottom: 0;
+        /* Posicionado no fundo da página */
+        width: 100%;
+        /* Largura total da página */
+        font-size: 12px;
+        /* Tamanho da fonte do rodapé */
+    }
+
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+        .search-bar {
+            width: 100%;
+            margin: 10px 0;
+        }
+
+        .product-grid {
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        }
+
+        .sidebar {
+            width: 150px;
+        }
+
+        .products {
+            margin-left: 170px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .sidebar {
+            width: 120px;
+        }
+
+        .products {
+            margin-left: 130px;
+        }
+
+        .product-grid {
+            gap: 10px;
+        }
+
+        .product img {
+            padding: 5px;
         }
     }
 }

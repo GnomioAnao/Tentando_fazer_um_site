@@ -1,13 +1,101 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>LevelUp</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="authors" content="Alicia Muniz e Caio Lima"> <!-- Metadado com os autores da página -->
+    
+    <title>Inicio - Level Up & Chill</title> <!-- Título da página -->
+    
+    <link rel="shortcut icon" href="./public/controller.ico" type="image/x-icon"> <!-- Favicon da página -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
 </head>
 <body>
-  <app-root></app-root>
-</body>
+    <app-root>
+      <header>
+          <div class="logo-container">
+              <img src="./public/marca_1.png" alt="Logo" class="logo"> <!-- Logo da empresa -->
+              <h1>Level Up & Chill</h1> <!-- Título principal -->
+          </div>
+          <div class="search-container">
+              <input type="text" class="search-bar" placeholder="Pesquisar..."> <!-- Barra de pesquisa -->
+          </div>
+          <div class="menu">
+              <a href="./cliente">👤</a> <!-- Link para a página de cadastro -->
+              <a href="compra.html">🛒</a> <!-- Link para a página de compras/carrinho -->
+              <div class="menu-icon" onclick="openNav()">☰</div> <!-- Ícone do menu responsivo -->
+          </div>
+      </header>
+
+      <div id="mySidenav" class="sidenav">
+          <!-- Menu lateral oculto -->
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a> <!-- Botão para fechar o menu lateral -->
+          <p class="cat">Categorias</p><br>
+          <a href="pagina-cabos.html">Cabos</a>
+          <a href="pagina-cadeira.html">Cadeiras Gamer</a>
+          <a href="pagina-controles.html">Consoles & controles</a>
+          <a href="pagina-headset.html">Headset</a>
+          <a href="pagina-cartas.html">Jogos de Cartas</a>
+          <a href="pagina-tabuleiro.html">Jogos de Tabuleiro</a>
+          <a href="pagina-videogame.html">Jogos de Video Game</a>
+          <a href="pagina-microfone.html">Microfone</a>
+          <a href="pagina-monitor.html">Monitores</a>
+          <a href="pagina-mousepad.html">Mousepad</a>
+          <a href="pagina-rgb-led.html">RGB</a>
+          <a href="pagina-suporte-controle.html">Suportes</a>
+          <a href="pagina-teclado-mouse.html">Teclados & mouse</a>
+      </div>
+
+      <div class="carousel-container">
+          <!-- Container principal do carrossel -->
+          <button class="prev" onclick="moveSlide(-1)">&#10094;</button> <!-- Botão de navegação para o slide anterior -->
+          
+          <div class="carousel">
+              <img src="./public/carrossel-3.png" class="carousel-item"> <!-- Imagem do carrossel -->
+          </div>
+          
+          <button class="next" onclick="moveSlide(1)">&#10095;</button> <!-- Botão de navegação para o próximo slide -->
+      </div>
+      
+      <br><br>
+      <i><b>{{mensagem}}</b></i>
+      <br><br>
+      <h4 *ngIf="lista.length<=0">Produtos utilizados em uma raid, necessário farm para continuar, tente mais tarde</h4>
+      <div class="feature-products">
+          <h2>Produtos em Destaque</h2> <!-- Título da seção -->
+          <div class="product-item">
+              <img src="" alt="Produto 1"> <!-- Imagem do produto 1 -->
+              <p>Produto 1</p> <!-- Nome do produto 1 -->
+          </div>
+          <div class="product-item">
+              <img src="produto2.jpg" alt="Produto 2"> <!-- Imagem do produto 2 -->
+              <p>Produto 2</p> <!-- Nome do produto 2 -->
+          </div>
+          <div class="product-item">
+              <img src="produto3.jpg" alt="Produto 3"> <!-- Imagem do produto 3 -->
+              <p>Produto 3</p> <!-- Nome do produto 3 -->
+          </div>
+          <div class="product-item">
+              <img src="produto4.jpg" alt="Produto 4"> <!-- Imagem do produto 4 -->
+              <p>Produto 4</p> <!-- Nome do produto 4 -->
+          </div>
+          <br><br><br>
+      </div>
+
+      <footer>
+          <!-- Rodapé do site -->
+          <p>&copy; Alicia Abade e Caio Lima - 2024</p> <!-- Direitos autorais -->
+      </footer>
+
+      <script>
+          // Funções para abrir e fechar o menu lateral
+          function openNav() {
+              document.getElementById("mySidenav").style.width = "250px";
+          }
+          function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+          }
+      </script>
+    </app-root>
+  </body>
 </html>
