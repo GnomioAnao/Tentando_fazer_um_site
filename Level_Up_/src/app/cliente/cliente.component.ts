@@ -8,7 +8,8 @@ import { json } from 'stream/consumers';
   selector: 'app-cliente',
   standalone: true,
   imports: [CommonModule, FormsModule],
-  templateUrl: './cliente.component.html'
+  templateUrl: './cliente.component.html',
+  styleUrls: ['./cliente.component.css']
 })
 export class ClienteComponent {
   public mensagem: string = "";

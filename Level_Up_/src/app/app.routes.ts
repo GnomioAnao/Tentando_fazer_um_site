@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { CestaComponent } from './cesta/cesta.component';
 import { EsqueciComponent } from './esqueci/esqueci.component';
 
+
 export const routes: Routes = [
     {path:"cliente", component:ClienteComponent},
     {path:"pagina-inicial", component:PaginaInicialComponent},
@@ -16,4 +17,5 @@ export const routes: Routes = [
     {path:"login", component:LoginComponent},
     {path:"cesta", component:CestaComponent},
     {path:"esqueci", component:EsqueciComponent}
+    
 ];
