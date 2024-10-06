@@ -1,73 +1,18 @@
-<head>
-    <meta charset="UTF-8">
-    <!-- Configurando a página para ser responsiva -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro - Level Up & Chill</title>
-    <link rel="stylesheet" href="/src/styles.css">
-    <link rel="stylesheet" href="/src/app/pagina-inicial.component.css">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="./public/controller.ico" type="image/x-icon">
-</head>
-
-<header>
-    <div class="logo-container">
-        <a href="./pagina-inicial.component.html"><img src="./public/marca_1.png" alt="Logo" class="logo"></a>
-        <h1>Level Up & Chill</h1>
-    </div>
-    <div class="search-container">
-        <input type="text" class="search-bar" placeholder="Pesquisar...">
-    </div>
-    <div class="menu">
-        <a href="./cliente">👤</a>
-        <a href="compra.html">🛒</a>
-        <div class="menu-icon" onclick="openNav()">☰</div>
-    </div>
-</header>
 <br><br>
-<h1><b>{{mensagem}}</b></h1>
-<body>
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <p class="cat">Categorias</p><br>
-        <a href="pagina-cabos.html">Cabos</a>
-        <a href="pagina-cadeira.html">Cadeiras Gamer</a>
-        <a href="pagina-controles.html">Consoles & controles</a>
-        <a href="pagina-headset.html">Headset</a>
-        <a href="pagina-cartas.html">Jogos de Cartas</a>
-        <a href="pagina-tabuleiro.html">Jogos de Tabuleiro</a>
-        <a href="pagina-videogame.html">Jogos de Video Game</a>
-        <a href="pagina-microfone.html">Microfone</a>
-        <a href="pagina-monitor.html">Monitores</a>
-        <a href="pagina-mousepad.html">Mousepad</a>
-        <a href="pagina-rgb-led.html">RGB</a>
-        <a href="pagina-suporte-controle.html">Suportes</a>
-        <a href="pagina-teclado-mouse.html">Teclados & mouse</a>
+<h1>Entrando Na Taverna...</h1>
+<body >
+    <div class="container">
+        <br><br>
+        <h1><b>{{mensagem}}</b></h1>
+        <br>
+        <form (ngSubmit)="gravar()" #formCliente="ngForm">
+            Nome Completo: <input type="text" placeholder="Username" [(ngModel)]="obj.nome" name="Nome Completo" required>
+            Telefone: <input type="text" placeholder="Número de Telefone" [(ngModel)]="obj.telefone" required>
+            Documento: <input type="text" placeholder="CPF" [(ngModel)]="obj.documento" required>
+            Email: <input type="text" placeholder="Cadastro@gmail.com" [(ngModel)]="obj.email" required>
+            Senha: <input type="password" placeholder="Senha" [(ngModel)]="obj.senha" required>
+            <button class="btn-go" (click)="gravar()">Go!</button>
+        </form>
     </div>
-    <main>
-        <div class="signup-container">
-            <h2>Cadastro</h2>
-            <br><br>
-            <form class="signup-form" action="welcome.html">
-                Nome Completo: <input type="text"  [(ngModel)] = "obj.nome" required>
-                Telefone: <input type="text" placeholder="Contato" [(ngModel)] = "obj.telefone" required>
-                Documento: <input type="text"  placeholder="CPF" [(ngModel)] = "obj.documento" required>
-                Email: <input type="text" placeholder="Cadastro@gmail.com" [(ngModel)] = "obj.email" required>
-                Senha: <input type="password" placeholder="Senha" [(ngModel)] = "obj.senha" required>
-                <button class="btn-go" (click)="gravar()">Go!</button>
-            </form>
-            <br>
-            <p>Já tem conta? <br><a href="./login">Faça login</a></p>
-        </div>
-    </main>
-    <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-        }
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-        }
-    </script>
-    <footer>
-        <p>&copy; Alicia Abade e Caio Lima - 2024</p>
-    </footer>
 </body>
+

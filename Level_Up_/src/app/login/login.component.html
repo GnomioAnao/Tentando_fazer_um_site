@@ -1,78 +1,13 @@
-<!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="authors" content="Alicia Muniz e Caio Lima">
-    
-    <title>Login - Level Up & Chill</title>
-    
-    <link rel="stylesheet" href="/Level_Up_/src/styles.css">
-    <style class="paginaInicial"></style>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="./public/controller.ico" type="image/x-icon">
-</head>
-
-<header>
-    <div class="logo-container">
-        <a href="./pagina-inicial.components.html"><img src="./public/marca_1.png" alt="Logo" class="logo"></a>
-        <h1>Level Up & Chill</h1>
-    </div>
-    <div class="search-container">
-        <input type="text" class="search-bar" placeholder="Pesquisar...">
-    </div>
-    <div class="menu">
-        <div class="menu">
-            <a href="./cliente">👤</a>
-            <a href="pagina-compras.html">🛒</a>
-            <div class="menu-icon" onclick="openNav()">☰</div>
-        </div>
-    </div>
-</header>
+<h2>Entrando Na Dungeon, XPs Estão a Sua Espera</h2>
+<br><br>
 <body>
-    <main>
-        <div class="login-container">
-            <h2>Login</h2><br>
-            <i><b>{{mensagem}}</b></i>
-            <form class="login-form" action="pagina-inincial.html">
-                E-mail: <input type="email" placeholder="E-mail" [(ngModel)] = "obj.email" required>
-                <br>
-                Senha: <input type="password" placeholder="Senha" [(ngModel)]= "obj.senha" required>
-                <br><br>
-                <button type="submit" class="btn-go" (click)="fazerLogin()">Entrar</button>
-                <br><br>
-                <p>Não tem conta?<br><br> <a href="./cliente">Start</a></p>
-                <button type="submit" class="btn-go" (click)="novoCadastro()">Novo cadastro</button>
-                <br><br>
-                <a href="./esqueci">Recuperar senha</a>
-            </form><br>
-        </div>
-    </main>
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <p class="cat">Categorias</p><br>
-        <a href="pagina-cabos.html">Cabos</a>
-        <a href="pagina-cadeira.html">Cadeiras Gamer</a>
-        <a href="pagina-controles.html">Consoles & controles</a>
-        <a href="pagina-headset.html">Headset</a>
-        <a href="pagina-cartas.html">Jogos de Cartas</a>
-        <a href="pagina-tabuleiro.html">Jogos de Tabuleiro</a>
-        <a href="pagina-videogame.html">Jogos de Video Game</a>
-        <a href="pagina-microfone.html">Microfone</a>
-        <a href="pagina-monitor.html">Monitores</a>
-        <a href="pagina-mousepad.html">Mousepad</a>
-        <a href="pagina-rgb-led.html">RGB</a>
-        <a href="pagina-suporte-controle.html">Suportes</a>
-        <a href="pagina-teclado-mouse.html">Teclados & mouse</a>
+    <div class="container">
+        <b>{{mensagem}}</b><br>
+        Email:<input type="email" [(ngModel)]="obj.email"><br>
+        Senha:<input type="password" [(ngModel)]="obj.senha"><br>
+        <button class="btn-go" (click)="fazerLogin()">Entrar</button>
+        <button class="btn-go" (click)="novoCadastro()">NG+</button>
+        <br><br><br>
+        <a href="./esqueci">Pegue Seu Loot de Volta!!!</a>
     </div>
-    <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-        }
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-        }
-    </script>
-    <footer>
-        <p>&copy; Alicia Abade e Caio Lima - 2024</p>
-    </footer>
 </body>

@@ -1,1 +1,17 @@
-<p>cesta works!</p>
+<h1>Cesta de Compras</h1>
+<b>{{mensagem}}</b>
+
+<table border="1">
+    <tr><td>Cod.</td><td>Nome</td><td>Qtd</td><td>Valor R$</td><td>Total Por Item R$</td></tr>
+
+    <tr *ngFor="let x of cesta.itens">
+        <td>{{x.codigo}}</td>
+        <td>{{x.produto.nome}}</td>
+        <td>{{x.quantidade}}</td>
+        <td>{{x.produto.valor}}</td>
+        <td>{{x.valor}}</td>
+        <td><button (click)="removerItem(x)">X</button></td>
+    </tr>
+    <tr><td colspan="4">Total</td><td>R$ {{cesta.total}}</td></tr>
+</table>
+<button (click)="limparCesta()">Dropar Todos os Itens</button>

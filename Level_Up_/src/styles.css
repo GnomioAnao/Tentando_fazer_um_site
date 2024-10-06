@@ -1,7 +1,6 @@
 /* Importar a fonte "Press Start 2P" */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-/* Estilos padrão (para telas maiores) */
 body {
     font-family: 'Press Start 2P', cursive;
     background-color: #f5f5dc; /* Cor creme */
@@ -10,97 +9,116 @@ body {
     padding: 0;
 }
 
-h4 {
-    color: #4b0082; /* Roxo */
-}
-
-.feature-products {
+header {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
-    margin-bottom: 80px; /* Espaçamento para evitar que os produtos toquem o rodapé */
-}
-
-.product-item {
-    background-color: #f5f5dc; /* Cor creme */
-    color: #4b0082;
-    border: 7px solid #4b0082; /* Bordas roxas */
-    padding: 10px;
-    border-radius: 8px;
-    width: 30%;
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: space-between;
-    text-align: center;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f5f5dc;
+    border-bottom: 7px solid #4b0082; /* Linha roxa embaixo */
 }
 
-/* Ajustar imagem para manter um tamanho consistente */
-.product-image {
-    width: 100%;
-    max-width: 200px;  /* Tamanho máximo da imagem */
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 10px;
+/* Logo e título */
+.logo-container {
+    display: flex;
+    align-items: center;
 }
 
-/* Botões estilizados */
-.btn-go {
-    background-color: #4b0082; /* Cor roxo */
-    color: #f5f5dc; /* Cor creme */
+.logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #4b0082;
+}
+
+/* Busca */
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
     padding: 10px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 12px;
-    margin-top: 10px;
+    border: 2px solid #4b0082;
+    border-radius: 8px;
+    font-size: 14px;
+    width: 250px;
     font-family: 'Press Start 2P', cursive;
 }
 
+.search-button {
+    background-color: #4b0082;
+    color: #f5f5dc;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-family: 'Press Start 2P', cursive;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #6a0dad; /* Efeito hover no botão de busca */
+}
+
+/* Ícones */
+.icon-container {
+    display: flex;
+    align-items: center;
+}
+
+.icon-container a {
+    color: #4b0082;
+    font-size: 24px;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.icon-container a:hover {
+    color: #6a0dad; /* Efeito hover nos ícones */
+}
+
+.menu {
+    background-color: #4b0082;
+    padding: 10px 0;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.menu ul li {
+    margin: 0 15px;
+}
+
+.menu ul li a {
+    color: #f5f5dc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.menu ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
 footer {
     background-color: #4b0082;
     color: #f5f5dc;
     text-align: center;
-    padding: 15px;  /* Ajustei o padding para garantir mais espaço */
+    padding: 15px;
     position: fixed;
     bottom: 0;
     width: 100%;
 }
 
-/* Media Query para telas médias (tablets) */
-@media (max-width: 768px) {
-    .product-item {
-        width: 45%; /* Ajustar o tamanho dos itens para caber melhor */
-    }
-
-    .btn-go {
-        font-size: 10px; /* Diminuir o tamanho do botão */
-    }
-
-    footer {
-        font-size: 14px;
-        padding: 15px;
-    }
-}
-
-/* Media Query para telas pequenas (celulares) */
-@media (max-width: 480px) {
-    .product-item {
-        width: 100%; /* Ocupa toda a largura da tela em dispositivos móveis */
-        margin: 10px 0;
-    }
-
-    .btn-go {
-        font-size: 8px;
-    }
-
-    footer {
-        font-size: 12px;
-        padding: 10px;
-    }
-}
 
 
 /*.paginaInicial{

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Cliente } from '../model/cliente';
-import { json } from 'stream/consumers';
+
 
 @Component({
   selector: 'app-cliente',

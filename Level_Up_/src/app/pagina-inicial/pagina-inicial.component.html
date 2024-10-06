@@ -1,4 +1,4 @@
-
+<br><br>
 <i><b>{{mensagem}}</b></i>
 <br><br>
 <h4 class="empty-message" *ngIf="lista.length<=0">Produtos utilizados em uma raid, necessário farm para continuar, tente mais tarde</h4>
@@ -15,7 +15,7 @@
         <br><br>
         R$ {{item.valor}}
         <button class="btn-go" (click)="verDetalhe(item)">Ver mais</button>
-        <button class="btn-go" *ngIf="item.quantidade">Comprar</button>
+        <button class="btn-go" *ngIf="item.quantidade>0" (click)="adicionarItem(item)">Comprar</button>
     </div>
 </div>
 
