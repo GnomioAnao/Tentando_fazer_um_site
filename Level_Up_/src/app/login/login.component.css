@@ -1,83 +1,95 @@
 body {
-    background-color: #f5f5dc; /* Cor de fundo definida */
-    color: #f5f5dc; /* Cor do texto para contraste com o fundo */
-    margin: 0; /* Remove margens padrão */
-    padding: 20px; /* Espaçamento interno */
-    display: flex; /* Usado para centralizar conteúdo */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    height: 100vh; /* Altura total da janela */
+    background-color: #f5f5dc; /* Cor de fundo */
+    color: #f5f5dc; /* Cor do texto */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 100vh;
+}
+
+.centraliza{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza apenas horizontalmente */
+    padding: 0;
+    text-align: center; /* Remove o padding, como solicitado */
+    /* position: absolute;
+    padding: 0px;
+    left: 50%;
+    transform: translate(-50%, -50%); */
 }
 
 .container {
+    background-color: #4B0032; /* Cor de fundo para o formulário */
+    color: #f5f5dc;
+    border-radius: 10px;
+    padding: 20px; /* Maior espaçamento interno */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    text-align: center;
     
-    background-color: #4B0032; /* Fundo claro para o formulário */
-    border-radius: 10px; /* Bordas arredondadas do contêiner */
-    padding: 10px; /* Espaçamento interno do contêiner */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para o contêiner */
-    width: 400px; /* Largura fixa para o formulário */
+    /* Alinha o container no centro vertical e horizontal da página */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-h1 {
-    color: #4CAF50; /* Cor verde para o título */
-    text-align: center; /* Centraliza o título */
+h2 {
+    color: #4CAF50; /* Cor dourada para o título */
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+b {
+    color: #FFD700; /* Cor dourada para a mensagem */
+    font-size: 18px;
 }
 
 input {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    width: 80%; /* Largura total do input */
-    padding: 10px; /* Espaçamento interno */
-    margin: 10px 0; /* Margem acima e abaixo */
-    border: 1px solid #ccc; /* Borda leve */
-    border-radius: 5px; /* Bordas arredondadas */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    font-size: 16px; /* Tamanho da fonte */
-    
+    width: 90%; /* Ajuste de largura dos inputs */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
 }
 
 input:focus {
-    border-color: #4CAF50; /* Cor da borda ao focar */
-    outline: none; /* Remove o contorno padrão */
-} 
+    border-color: #FFD700; /* Cor da borda ao focar */
+    outline: none;
+}
 
 .btn-go {
     background-color: #4CAF50; /* Cor do botão */
-    color: white; /* Cor do texto do botão */
-    border: none; /* Remove a borda padrão */
-    border-radius: 5px; /* Bordas arredondadas */
-    padding: 10px 20px; /* Espaçamento interno do botão */
-    font-size: 16px; /* Tamanho da fonte do botão */
-    cursor: pointer; /* Cursor em forma de mão ao passar sobre o botão */
-    transition: background-color 0.3s; /* Transição suave para a cor do fundo */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px 5px; /* Margem entre os botões */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-go a {
+    color: white; /* Cor do link dentro do botão */
+    text-decoration: none;
 }
 
 .btn-go:hover {
-    background-color: #45a049; /* Cor do botão ao passar o mouse */
+    background-color: #45a049; /* Cor ao passar o mouse */
 }
 
-/* Definindo a animação */
-@keyframes moveLine {
-    0% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(5px); /* Mover para a direita */
-    }
-    100% {
-        transform: translateX(0); /* Voltar à posição original */
-    }
-}
-
-/* Estilos para o link */
 a {
-    position: relative; /* Necessário para a animação funcionar corretamente */
-    color: #4CAF50; /* Cor do link */
-    text-decoration: none; /* Remove o sublinhado padrão */
-    transition: color 0.3s; /* Transição suave para a cor */
+    color: #FFD700; /* Cor dourada para o link */
+    text-decoration: none;
+    font-size: 14px;
 }
 
-/* Animação ao passar o mouse */
 a:hover {
-    animation: moveLine 0.5s ease forwards; /* Aplicando a animação ao passar o mouse */
-    color: #45a049; /* Cor do link ao passar o mouse */
+    text-decoration: underline; /* Sublinhar ao passar o mouse */
 }

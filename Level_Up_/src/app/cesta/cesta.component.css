@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.centraliza{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza apenas horizontalmente */
+    padding: 0;
+    text-align: center; /* Remove o padding, como solicitado */
+}
+
+.pixelated-table {
+    font-family: 'Press Start 2P', cursive; /* Fonte pixelada */
+    font-size: 12px;
+    border-collapse: collapse; /* Remove o espaçamento entre células */
+    margin: 20px auto; /* Centraliza a tabela */
+    font-size: 16px; /* Tamanho de fonte reduzido para simular um efeito "pixelado" */
+    text-align: center;
+}
+
+.pixelated-table td {
+    width: 40px; /* Define um tamanho fixo para as células */
+    height: 40px;
+    border: 2px solid #000; /* Borda grossa para criar um visual "pixelado" */
+    background-color: #f5f5dc; /* Cor de fundo para o efeito */
+    color: #000; /* Cor do texto */
+    padding: 0; /* Remove o padding interno */
+}
+
+.pixelated-table td:hover {
+    background-color: #4B0032; /* Efeito ao passar o mouse, para destacar a célula */
+    color: #f5f5dc; /* Texto branco ao passar o mouse */
+}
+
+.btn-go {
+    background-color: #4CAF50; /* Cor do botão */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px 5px; /* Margem entre os botões */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-go:hover {
+    background-color: #45a049; /* Cor ao passar o mouse */
+}

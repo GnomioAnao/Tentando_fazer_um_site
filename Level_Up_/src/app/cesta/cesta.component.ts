@@ -9,7 +9,7 @@ import { Produto } from '../model/produto';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './cesta.component.html',
-  styleUrl: './cesta.component.css'
+  styleUrls: ['./cesta.component.css']
 })
 export class CestaComponent {
     public mensagem: string = "";
@@ -20,7 +20,7 @@ export class CestaComponent {
         if(json!=null){
           this.cesta = JSON.parse(json);
         } else {
-          this.mensagem = "Carrinho vazia, adicione novos itens para a Raid!";  
+          this.mensagem = "Inventário vazio, compre novos itens para a Raid!";  
         } 
     }
 

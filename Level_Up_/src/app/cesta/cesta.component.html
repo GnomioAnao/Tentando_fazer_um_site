@@ -1,17 +1,20 @@
-<h1>Cesta de Compras</h1>
-<b>{{mensagem}}</b>
+<div class="centraliza">
+    <h1>Inventário</h1>
+    <br><br>
+    <b>{{mensagem}}</b>
+    <br><br>
+    <table class="pixelated-table" border="1">
+        <tr><td class="pixelated-table">Cod.</td><td>Nome</td><td>Qtd</td><td>Valor R$</td><td>Total Por Item R$</td></tr>
 
-<table border="1">
-    <tr><td>Cod.</td><td>Nome</td><td>Qtd</td><td>Valor R$</td><td>Total Por Item R$</td></tr>
-
-    <tr *ngFor="let x of cesta.itens">
-        <td>{{x.codigo}}</td>
-        <td>{{x.produto.nome}}</td>
-        <td>{{x.quantidade}}</td>
-        <td>{{x.produto.valor}}</td>
-        <td>{{x.valor}}</td>
-        <td><button (click)="removerItem(x)">X</button></td>
-    </tr>
-    <tr><td colspan="4">Total</td><td>R$ {{cesta.total}}</td></tr>
-</table>
-<button (click)="limparCesta()">Dropar Todos os Itens</button>
+        <tr *ngFor="let x of cesta.itens">
+            <td class="pixelated-table">{{x.codigo}}</td>
+            <td class="pixelated-table">{{x.produto.nome}}</td>
+            <td class="pixelated-table">{{x.quantidade}}</td>
+            <td class="pixelated-table">{{x.produto.valor}}</td>
+            <td class="pixelated-table">{{x.valor}}</td>
+            <td class="pixelated-table"><button (click)="removerItem(x)">X</button></td>
+        </tr>
+        <tr><td colspan="4">Total</td><td>R$ {{cesta.total}}</td></tr>
+    </table>
+    <button class="btn-go"  (click)="limparCesta()">Dropar Todos os Itens</button>
+</div>
