@@ -83,32 +83,22 @@ footer {
 /* Media Query para telas médias (tablets) */
 @media (max-width: 768px) {
     .product-item {
-        width: 45%; /* Ajustar o tamanho dos itens para caber melhor */
+        width: 45%; /* Ajuste dos produtos */
     }
 
     .btn-go {
-        font-size: 10px; /* Diminuir o tamanho do botão */
-    }
-
-    footer {
-        font-size: 14px;
-        padding: 15px;
+        font-size: 10px; /* Reduzir tamanho dos botões */
     }
 }
 
 /* Media Query para telas pequenas (celulares) */
 @media (max-width: 480px) {
     .product-item {
-        width: 100%; /* Ocupa toda a largura da tela em dispositivos móveis */
-        margin: 10px 0;
+        width: 100%; /* 100% da largura em telas pequenas */
     }
 
     .btn-go {
         font-size: 8px;
-    }
-
-    footer {
-        font-size: 12px;
-        padding: 10px;
+        padding: 8px; /* Ajuste no padding para caber em telas pequenas */
     }
 }

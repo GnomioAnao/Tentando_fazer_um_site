@@ -93,3 +93,15 @@ a {
 a:hover {
     text-decoration: underline; /* Sublinhar ao passar o mouse */
 }
+
+.senha-container {
+    position: relative;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}

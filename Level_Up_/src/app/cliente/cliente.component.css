@@ -6,7 +6,7 @@ body {
     display: flex; /* Usado para centralizar conteúdo */
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center; /* Centraliza verticalmente */
-    height: 100vh; /* Altura total da janela */
+    height: 60vh; /* Altura total da janela */
 }
 
 .container {
@@ -16,6 +16,8 @@ body {
     padding: 10px; /* Espaçamento interno do contêiner */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para o contêiner */
     width: 400px; /* Largura fixa para o formulário */
+    
+    
 }
 
 h1 {
@@ -53,4 +55,16 @@ input:focus {
 
 .btn-go:hover {
     background-color: #45a049; /* Cor do botão ao passar o mouse */
+}
+
+.senha-container {
+    position: relative;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
 }

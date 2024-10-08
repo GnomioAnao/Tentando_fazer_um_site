@@ -14,6 +14,7 @@ import { Cliente } from '../model/cliente';
 export class ClienteComponent {
   public mensagem: string = "";
   public obj: Cliente = new Cliente();
+  senhaOculta=true;
 
   public gravar(){
     localStorage.setItem("cliente", JSON.stringify(this.obj));
@@ -35,6 +36,22 @@ export class ClienteComponent {
 
   constructor(){
     this.carregar();
+  }
+
+  toggleSenha() {
+    this.senhaOculta = !this.senhaOculta; // Alterna a visibilidade da senha
+  }
+
+  formatarCPF() {
+    // Formata o CPF
+    const input = this.obj.documento.replace(/\D/g, ''); // Remove tudo que não é dígito
+    if (input.length > 11) {
+      this.obj.documento = input.slice(0, 11); // Limita a 11 dígitos
+    }
+    this.obj.documento = this.obj.documento
+      .replace(/(\d{3})(\d)/, '$1.$2') // Adiciona ponto após 3 dígitos
+      .replace(/(\d{3})(\d)/, '$1.$2') // Adiciona ponto após 3 dígitos
+      .replace(/(\d{3})(\d{1,2})$/, '$1-$2'); // Adiciona hífen antes dos últimos 2 dígitos
   }
 }
 

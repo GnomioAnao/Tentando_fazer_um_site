@@ -1,48 +1,109 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-.centraliza{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%); /* Centraliza apenas horizontalmente */
+.centraliza {
+    position: relative;
+    text-align: center;
     padding: 0;
-    text-align: center; /* Remove o padding, como solicitado */
+    margin: 20px;
 }
 
 .pixelated-table {
-    font-family: 'Press Start 2P', cursive; /* Fonte pixelada */
+    font-family: 'Press Start 2P', cursive;
     font-size: 12px;
-    border-collapse: collapse; /* Remove o espaçamento entre células */
-    margin: 20px auto; /* Centraliza a tabela */
-    font-size: 16px; /* Tamanho de fonte reduzido para simular um efeito "pixelado" */
+    border-collapse: collapse;
+    margin: 20px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+.pixelated-table th, .pixelated-table td {
+    border: 2px solid #000;
+    background-color: #f5f5dc;
+    color: #000;
+    padding: 10px;
+    font-size: 14px;
     text-align: center;
 }
 
-.pixelated-table td {
-    width: 40px; /* Define um tamanho fixo para as células */
-    height: 40px;
-    border: 2px solid #000; /* Borda grossa para criar um visual "pixelado" */
-    background-color: #f5f5dc; /* Cor de fundo para o efeito */
-    color: #000; /* Cor do texto */
-    padding: 0; /* Remove o padding interno */
+.pixelated-table th {
+    background-color: #4b0082;
+    color: #f5f5dc;
+    font-weight: bold;
 }
 
-.pixelated-table td:hover {
-    background-color: #4B0032; /* Efeito ao passar o mouse, para destacar a célula */
-    color: #f5f5dc; /* Texto branco ao passar o mouse */
-}
-
+/* Botão estilizado */
 .btn-go {
-    background-color: #4CAF50; /* Cor do botão */
+    background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
-    margin: 10px 5px; /* Margem entre os botões */
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
+    display: block;
+    width: 100%; /* O botão ocupará toda a largura */
+    max-width: 300px; /* Limite de largura para telas maiores */
+    margin: 20px auto;
 }
 
 .btn-go:hover {
-    background-color: #45a049; /* Cor ao passar o mouse */
+    background-color: #45a049;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .pixelated-table {
+        width: 100%;
+    }
+
+    .pixelated-table th {
+        display: none; /* Esconde o cabeçalho em telas pequenas */
+    }
+
+    .pixelated-table tr {
+        display: block;
+        margin-bottom: 15px;
+        border: 2px solid #4b0082;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .pixelated-table td {
+        display: block;
+        text-align: left;
+        padding: 10px;
+        border: none;
+        font-size: 12px;
+    }
+
+    .pixelated-table td:before {
+        content: attr(data-label); /* Exibe o nome da coluna antes de cada célula */
+        font-weight: bold;
+        color: #4b0082;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    /* Move o botão abaixo da mensagem em telas menores */
+    .btn-go {
+        position: relative;
+        width: 100%;
+        max-width: none;
+        margin-top: 10px; /* Fica logo após a mensagem */
+        margin-bottom: 20px; /* Espaçamento inferior */
+    }
+}
+
+@media (max-width: 480px) {
+    .pixelated-table td {
+        font-size: 10px;
+        padding: 6px;
+    }
+
+    .btn-go {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
 }

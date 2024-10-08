@@ -141,10 +141,10 @@ footer {
 }
 
 body {
-    background-image: url('../public/dino_base.jpg');
-    background-size: cover;
+    background-image: url('../public/dino_base.jpg'), url('../public/dino_base.jpg');
+    background-size: cover, cover;
     background-position: 0 0;
-    background-repeat: repeat; /* A imagem se repete para dar continuidade */
+    background-repeat: repeat, repeat; /* A imagem se repete para dar continuidade */
     animation: mover-fundo 10s linear infinite; /* Animação do fundo */
 }
 
@@ -157,3 +157,61 @@ body {
     }
 }
 
+/* Responsividade no header */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: center;
+    }
+
+    .logo-container h1 {
+        font-size: 20px;
+    }
+
+    .search-container {
+        margin-top: 10px;
+    }
+
+    .icon-container {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        height: 40px;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+
+    .icon-container a {
+        font-size: 20px;
+    }
+}
+
+/* Menu responsivo - Estilo hambúrguer */
+@media (max-width: 768px) {
+    .menu ul {
+        flex-direction: column;
+        align-items: flex-start;
+        display: none; /* Menu escondido inicialmente em telas pequenas */
+    }
+
+    .menu-toggle {
+        display: block;
+        background-color: #4b0082;
+        color: #f5f5dc;
+        padding: 10px;
+        cursor: pointer;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu ul li a {
+        font-size: 12px;
+    }
+}

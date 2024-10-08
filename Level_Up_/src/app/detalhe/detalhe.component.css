@@ -1,155 +1,118 @@
-.paginaDetalhe{
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.centraliza {
+    position: relative;
+    text-align: center;
+    padding: 0;
+    margin: 20px;
+}
+
+.fixa_imagem{
+    background-color: #f5f5dc; /* Cor de fundo como fallback */
     
-    body {
-        font-family: 'Press Start 2P', sans-serif;
-        background-color: #2C003E;
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    }
+    /* Imagem de fundo */
+    /* background-image: url('./public/dino_base.jpg'); */
     
-    .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px;
-        background-color: #390E4C;
-    }
+    /* Faz a imagem cobrir toda a tela sem cortar */
+    background-attachment: fixed;
+    background-size: cover; /* A imagem será redimensionada para cobrir toda a área do body */
+    background-repeat: repeat; /* Evita que a imagem se repita */
+    background-position: 0 0; /* Centraliza a imagem tanto horizontal quanto verticalmente */
+    animation: mover-fundo 10s linear infinite;
     
-    header {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 20px;
+    /* Adiciona altura mínima para garantir que o fundo cubra toda a tela */
+    min-height: 100vh; /* 100% da altura da viewport */
+}
+/* Estilos básicos do corpo */
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #f5f5dc; /* Cor de fundo creme */
+    color: #4b0082; /* Texto roxo */
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Estilo da mensagem de erro ou aviso */
+h4 {
+    color: #4b0082;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+/* Título do item */
+h3 {
+    color: #4b0082;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Estilo da imagem do item */
+img {
+    max-width: 100%; /* A imagem ocupará toda a largura disponível em dispositivos menores */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-bottom: 20px;
+    border: 4px solid #4b0082; /* Borda roxa ao redor da imagem */
+    border-radius: 8px;
+}
+
+/* Descritivo e preço do item */
+p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Estilo do botão "Comprar" */
+button {
+    background-color: #4b0082; /* Cor roxa */
+    color: #f5f5dc; /* Cor creme */
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #6a0dad; /* Roxo mais claro no hover */
+    transform: scale(1.1); /* Efeito de "zoom" no botão ao passar o mouse */
+}
+
+/* Estilo para exibir mensagem de "Sem estoque" */
+div {
+    color: #ff4500; /* Vermelho alaranjado para destacar que está sem estoque */
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+/* Media Queries para dispositivos menores */
+@media (max-width: 768px) {
+    h3 {
+        font-size: 20px;
     }
-    
-    .logo-container {
-        display: flex;
-        align-items: center;
+
+    button {
+        font-size: 12px;
+        padding: 8px 16px;
     }
-    
-    .logo {
-        width: 50px;
-        height: 50px;
-        margin-right: 10px;
+
+    div {
+        font-size: 12px;
     }
-    
-    .logo-container h1 {
+}
+
+@media (max-width: 480px) {
+    h3 {
         font-size: 18px;
-        color: white;
     }
-    
-    .produto-detalhes {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: flex-start;
+
+    button {
+        font-size: 10px;
+        padding: 6px 12px;
     }
-    
-    .produto-imagem img {
-        max-width: 300px;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-    
-    .produto-info {
-        max-width: 600px;
-        text-align: left;
-    }
-    
-    .produto-info h2 {
-        font-size: 24px;
-        margin-bottom: 10px;
-    }
-    
-    .produto-info p {
-        margin-bottom: 10px;
-    }
-    
-    .preco {
-        font-size: 22px;
-        color: #ff6600;
-        margin-bottom: 20px;
-    }
-    
-    .actions {
-        display: flex;
-        gap: 10px;
-    }
-    
-    button,
-    .cart-icon {
-        background-color: #E40058;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-    
-    button:hover,
-    .cart-icon:hover {
-        background-color: #a5003f;
-    }
-    
-    .cart-icon {
-        font-size: 24px;
-        display: inline-block;
-    }
-    
-    footer {
-        margin-top: 20px;
-    }
-    
-    footer a {
-        color:white;
-        text-decoration: none;
-        font-weight: bold;
-    }
-    
-    footer a:hover {
-        text-decoration: underline;
-        
-    }
-    
-    @media (max-width: 768px) {
-        .produto-detalhes {
-            flex-direction: column;
-            align-items: center;
-        }
-    
-        .produto-imagem img {
-            max-width: 100%;
-        }
-    
-        .produto-info {
-            max-width: 100%;
-        }
-    
-        .actions {
-            justify-content: center;
-        }
-    }
-    
-    @media (max-width: 480px) {
-        header h1 {
-            font-size: 18px;
-        }
-    
-        .produto-info h2 {
-            font-size: 20px;
-        }
-    
-        .preco {
-            font-size: 20px;
-        }
+
+    div {
+        font-size: 10px;
     }
 }

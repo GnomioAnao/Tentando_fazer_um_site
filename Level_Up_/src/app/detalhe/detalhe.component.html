@@ -1,25 +1,19 @@
+<body class="fixa_imagem">
+    <h4>{{mensagem}}</h4> <!-- Mensagem de erro ou aviso -->
+    <div *ngIf="item.codigo > 0">
+        <h3>{{item.nome}}</h3> <!-- Nome do item -->
+        
+        <!-- Imagem do item -->
+        <img src="./{{item.codigo}}.jpg" alt="{{item.nome}}"><br> 
+        
+        <!-- Descritivo e valor do item -->
+        <p>{{item.descritivoCompleto}}</p>
+        <p>R$ {{item.valor}}</p>
 
+        <!-- Botão de compra -->
+        <button *ngIf="item.quantidade > 0">Comprar</button>
 
-
-    <!-- <div class="container">
-        <header>
-            <div class="logo-container">
-                <a href="pagina-inicial.component.html"><img src="./marca_1.jpg" alt="Logo" class="logo"></a>
-                <h1>Level Up & Chill</h1>
-            </div>
-            <div class="search-container">
-                <input type="text" class="search-bar" placeholder="Pesquisar...">
-             -->
-
-  
-
-
-<h4>{{mensagem}}</h4>
-<div *ngIf="item.codigo > 0 ">
-    <h3>{{item.nome}}</h3>
-    <img src="./{{item.codigo}}.jpg"><br>
-    {{item.descritivo}} <br>
-    R$ {{item.valor}} <br>
-    <button *ngIf="item.quantidade>0">Comprar</button>
-    <div *ngIf="item.quantidade<=0">Sem estoque</div>
-</div> 
+        <!-- Mensagem "Sem estoque" -->
+        <div *ngIf="item.quantidade <= 0">Sem estoque</div>
+    </div>
+</body>

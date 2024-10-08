@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 export class LoginComponent {
   public mensagem: string = ""
   public obj: Cliente = new Cliente();
+  senhaOculta = true;
   public fazerLogin(){
     if(this.obj.email=='email@gmail.com' &&
       this.obj.senha=='123456'){
@@ -26,6 +27,10 @@ export class LoginComponent {
   public novoCadastro(){
     localStorage.setItem("cliente", JSON.stringify(this.obj));
     window.location.href="./cliente";
+  }
+
+  toggleSenha() {
+    this.senhaOculta = !this.senhaOculta; // Alterna a visibilidade da senha
   }
 }
 

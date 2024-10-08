@@ -1,6 +1,6 @@
 <br><br>
 <h1>Entrando Na Taverna...</h1>
-<body >
+<body>
     <div class="container">
         <br><br>
         <h1><b>{{mensagem}}</b></h1>
@@ -8,11 +8,15 @@
         <form (ngSubmit)="gravar()" #formCliente="ngForm">
             Nome Completo: <input type="text" placeholder="Username" [(ngModel)]="obj.nome" name="Nome Completo" required>
             Telefone: <input type="text" placeholder="Número de Telefone" [(ngModel)]="obj.telefone" required>
-            Documento: <input type="text" placeholder="CPF" [(ngModel)]="obj.documento" required>
+            CPF: 
+            <input type="text" placeholder="CPF" [(ngModel)]="obj.documento" required (input)="formatarCPF()">
             Email: <input type="text" placeholder="Cadastro@gmail.com" [(ngModel)]="obj.email" required>
-            Senha: <input type="password" placeholder="Senha" [(ngModel)]="obj.senha" required>
+            Senha: 
+            <div class="senha-container">
+                <input [type]="senhaOculta ? 'password' : 'text'" placeholder="Senha" [(ngModel)]="obj.senha" required>
+                <span class="eye-icon" (click)="toggleSenha()">{{ senhaOculta ? '👁️' : '🙈' }}</span>
+            </div>
             <button class="btn-go" (click)="gravar()">Go!</button>
         </form>
     </div>
 </body>
-
