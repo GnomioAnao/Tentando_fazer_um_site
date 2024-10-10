@@ -6,7 +6,7 @@ body {
     display: flex; /* Usado para centralizar conteúdo */
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center; /* Centraliza verticalmente */
-    height: 60vh; /* Altura total da janela */
+    height: 70vh; /* Altura total da janela */
 }
 
 .container {

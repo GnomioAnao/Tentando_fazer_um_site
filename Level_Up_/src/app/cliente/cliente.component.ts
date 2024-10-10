@@ -17,9 +17,36 @@ export class ClienteComponent {
   senhaOculta=true;
 
   public gravar(){
-    localStorage.setItem("cliente", JSON.stringify(this.obj));
-    this.mensagem = "Cadastro Upado com sucesso!";
+    if (
+      this.obj.nome != "" &&
+      this.obj.email != "" &&
+      this.obj.telefone != "" &&
+      this.obj.endereco != "" &&
+      this.obj.senha != "" &&
+      this.obj.confirmarSenha != ""
+  ) {
+      if (this.obj.senha === this.obj.confirmarSenha) {
+          localStorage.setItem("cadastro", JSON.stringify(this.obj));
+          this.mensagem = "Parabéns! Seu cadastro foi realizado com sucesso!";
+      } else {
+          this.mensagem = "Senha e a confirmação devem ser iguais";
+      }
+  } else {
+      this.mensagem = "Preencha todos os campos!!!";
   }
+}
+
+PasswordVisivel: boolean = false;
+public SenhaVisivel(){
+  this.PasswordVisivel = !this.PasswordVisivel;
+}
+
+ConfirmaVisivel: boolean = false;
+public ConfirmaSenhaVisivel(){
+  this.ConfirmaVisivel = !this.ConfirmaVisivel;
+}
+
+  
 
   /* nesse bloco de código (o de baixo), estamos fazendo uma decisão para poder carregar o usuário já cadastrado, 
   caso ele já tenha um cadastro ele será levado para página de Login, onde podera entrar ou 

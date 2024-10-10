@@ -15,10 +15,11 @@ export class LoginComponent {
   public obj: Cliente = new Cliente();
   senhaOculta = true;
   public fazerLogin(){
-    if(this.obj.email=='email@gmail.com' &&
+    if(this.obj.email=='Gnomio@gmail.com' &&
       this.obj.senha=='123456'){
-        localStorage.setItem("cliente", JSON.stringify(this.obj));
-        window.location.href="./cliente";
+        localStorage.setItem("pagina-inicial", JSON.stringify(this.obj));
+        window.location.href="./pagina-inicial";
+        this.mensagem="Correto!";
       } else {
         this.mensagem = "Email ou Senha inválidos, reinicie o Mundo!!!";
         localStorage.removeItem("cliente");

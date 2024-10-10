@@ -5,4 +5,7 @@ export class Cliente {
     public documento: string = "";
     public telefone: string = "";
     public senha: string = "";
+    public endereco: string="";
+    public confirmarSenha: string="";
+    public cep: string="";
 }
